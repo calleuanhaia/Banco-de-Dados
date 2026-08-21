@@ -1,0 +1,98 @@
+CREATE DATABASE senai2;
+USE senai2;
+
+CREATE TABLE professor(
+	id_professor INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    data_nascimento DATE,
+    cidade VARCHAR(255)
+);
+
+INSERT INTO professor (nome, data_nascimento, cidade) VALUES ('Alceu Matteucci Junior', '2000-12-18', 'Fraiburgo');
+INSERT INTO professor (nome, data_nascimento, cidade) VALUES ('Leo Victor Corso', '1998-08-01', 'Água Doce');
+INSERT INTO professor (nome, data_nascimento, cidade) VALUES ('Douglas Tibola Junior', '2005-11-07', 'Ibicaré');
+
+SELECT * FROM professor;
+
+CREATE TABLE aluno(
+	id_aluno INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    data_nascimento DATE,
+    telefone VARCHAR(11) NOT NULL,
+    cidade VARCHAR(255) NOT NULL
+);
+
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Leonardo', '2008-12-30', '49 99493796', 'Joaçaba');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Zagonel', '2006-02-21', '49 88044018', 'Joaçaba');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Eric', '2008-04-17', '49 98132893', 'Catanduvas');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Kauã', '2009-04-27', '49 98217123', 'Treze Tílias');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Mayara', '2001=10-14', '49 91776257', 'Catanduvas');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Jeyliel', '2007-02-02', '49 99945943', 'Ouro');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Kaike', '2009-02-11', '49 98378702', 'Herval D´Oeste');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('João Vitor', '2004-12-17', '49 91163228', 'Capinzal');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Calléu', '2006-08-14', '49 99476690', 'Água Doce');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Artur', '2008-02-02', '49 89091427', 'Joaçaba');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Gustavo Mauro', '2008-02-22', '49 99907981', 'Catanduvas');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Crystyan Gustavo de Brito Rodrigues', '2008-10-20', '49 99496584', 'Treze Tílias');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Mateus Kafer Zang', '2009-02-17', '49 99493796', 'Treze Tílias');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Gustavo Cenci', '2006-12-05', '49 91583807', 'Treze Tílias');
+INSERT INTO aluno (nome, data_nascimento, telefone, cidade) VALUES ('Samuel Piaia', '2006-02-18', '49 98175430', 'Joaçaba');
+
+SELECT * FROM aluno;
+
+CREATE TABLE disciplina(
+	id_disciplina INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL
+);
+
+INSERT INTO disciplina (nome) VALUES ('Lógica de Programação');
+INSERT INTO disciplina (nome) VALUES ('Introdução à Tecnologia da Informação e Comunicação');
+INSERT INTO disciplina (nome) VALUES ('Fundamentos de Eletroeletrônica Aplicada');
+INSERT INTO disciplina (nome) VALUES ('Introdução ao Desenvolvimento de Projetos');
+INSERT INTO disciplina (nome) VALUES ('Banco de Dados');
+INSERT INTO disciplina (nome) VALUES ('Modelagem de Sistemas');
+INSERT INTO disciplina (nome) VALUES ('Programação de Aplicativos');
+INSERT INTO disciplina (nome) VALUES ('Introdução a Qualidade e Produtividade');
+INSERT INTO disciplina (nome) VALUES ('Teste de Sistemas');
+INSERT INTO disciplina (nome) VALUES ('Sustentabilidade nos Processos Industriais');
+INSERT INTO disciplina (nome) VALUES ('Desenvolvimento de Sistemas');
+INSERT INTO disciplina (nome) VALUES ('Introdução a Indústria 4.0');
+INSERT INTO disciplina (nome) VALUES ('Internet das Coisas');
+INSERT INTO disciplina (nome) VALUES ('Manutenção de Sistemas');
+INSERT INTO disciplina (nome) VALUES ('Implantação de Sistemas');
+INSERT INTO disciplina (nome) VALUES ('Saúde e Segurança no Trabalho');
+
+SELECT * FROM disciplina;
+
+CREATE TABLE sala(
+	id_sala INT PRIMARY KEY AUTO_INCREMENT,
+    numero_sala INT NOT NULL,
+    tipo_sala VARCHAR(255)
+);
+
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (201, 'Laboratório de Gestão e Liderança');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (202, 'Laboratório de Eletrônica');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (203, 'Laboratório de Eletricidade Predial');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (204, 'Eletricidade Industrial Avançada');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (205, 'Laboratório de Aplicação 4.0');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (206, 'Laboratório de Automação Industrial');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (207, 'Laboratório de Eletricidade Industrial');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (208, 'Laboratório SEP');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (501, 'Sala de Aula');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (502, 'Sala de Aula');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (503, 'Sala de Aula');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (505, 'Sala de Aula');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (506, 'Laboratório de Informatica');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (507, 'PCP');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (508, 'Laboratório de Informatica');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (509, 'Laboratório de Informatica');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (511, 'Depósito');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (512, 'Laboratório de Informatica');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (601, 'Laboratório de Mecânica');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (602, 'Laboratório de Mecânica');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (603, 'Laboratório de Mecânica');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (604, 'Laboratório de Mecânica');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (605, 'Laboratório de Mecânica');
+INSERT INTO sala (numero_sala, tipo_sala) VALUES (606, 'Laboratório de Mecânica');
+
+SELECT * FROM sala;
